@@ -1,66 +1,57 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Bel Veliz | Software Engineer</title>
-  <link rel="stylesheet" href="styles.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bel Veliz Mederos - Realtor NJ</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header>
 
-    <h1>Bel Veliz</h1>
-    <p>Software Engineer | Full-Stack Developer</p>
-    <p>Elizabeth, NJ | belvelizm@gmail.com | 908-808-1738</p>
-    <div class="links">
-      <a href="https://www.linkedin.com/in/bel-veliz-89b782352" target="_blank">LinkedIn</a> |
-      <a href="https://github.com/2000Bel" target="_blank">GitHub</a>
-    </div>
+  <header>
+    <img src="images/perfil.jpg" alt="Bel Veliz" class="profile-photo">
+    <h1>Bel Veliz Mederos</h1>
+    <p>Agente de Bienes Raíces en Nueva Jersey</p>
+    <a href="https://www.instagram.com/realtorbelveliz" target="_blank">@realtorbelveliz</a>
+    <a href="https://calendly.com/realtorbelveliz" class="cta-button" target="_blank">Agendar Cita</a>
   </header>
 
-  <main>
-    <section>
-      <h2>About Me</h2>
-      <p>
-        Motivated and detail-oriented Software Engineer with experience in full-stack development, database management, and agile methodologies. Passionate about building scalable web applications and continuously learning new technologies.
-      </p>
-    </section>
+  <section class="about">
+    <h2>Sobre mí</h2>
+    <p>Soy agente inmobiliaria licenciada en Nueva Jersey. Me especializo en compra, venta y alquiler de propiedades. ¡Estoy aquí para ayudarte!</p>
+  </section>
 
-    <section>
-      <h2>Technical Skills</h2>
-      <ul>
-        <li>JavaScript, Python, HTML5, CSS3, SQL</li>
-        <li>React.js, Node.js, Express.js, Django, EJS</li>
-        <li>PostgreSQL, MongoDB, MySQL</li>
-        <li>Git, GitHub, Heroku, Netlify, VSCode, Postman, Trello</li>
-        <li>RESTful APIs, MVC, CRUD, JWT, Sessions</li>
-      </ul>
-    </section>
+  <section class="gallery">
+    <h2>Propiedades Destacadas</h2>
+    <div class="property-list">
+      <img src="images/propiedad1.jpg" alt="Propiedad 1">
+      <img src="images/propiedad2.jpg" alt="Propiedad 2">
+    </div>
+  </section>
 
-    <section>
-      <h2>Projects</h2>
-      <ul>
-        <li><strong>Movie Buff</strong> – <a href="https://movie-buff-9706d1877721.herokuapp.com/" target="_blank">Live Demo</a></li>
-        <li><strong>Task Manager</strong> – <a href="https://tasks--manager-3467da4b4889.herokuapp.com/" target="_blank">Live Demo</a></li>
-        <li><strong>Event Horizon</strong> – <a href="https://event-horizon-liability-solutions.netlify.app/" target="_blank">Netlify</a></li>
-        <li><strong>Cosmonaut vs Asteroids</strong> – <a href="https://github.com/2000Bel/Game-Projet-Cosmonaut.git" target="_blank">GitHub</a></li>
-      </ul>
-    </section>
-
-    <section>
-      <h2>Contact</h2>
-      <form id="contact-form">
-        <input type="text" name="name" placeholder="Your Name" required />
-        <input type="email" name="email" placeholder="Your Email" required />
-        <textarea name="message" placeholder="Your Message" required></textarea>
-        <button type="submit">Send</button>
-      </form>
-    </section>
-  </main>
+  <section class="contact">
+    <h2>Contáctame</h2>
+    <form id="contact-form">
+      <input type="text" placeholder="Tu nombre" required>
+      <input type="email" placeholder="Tu correo electrónico" required>
+      <textarea placeholder="Tu mensaje" required></textarea>
+      <button type="submit">Enviar</button>
+    </form>
+  </section>
 
   <footer>
-    <p>&copy; 2025 Bel Veliz</p>
+    <p>&copy; 2025 Bel Veliz Mederos</p>
+    <p>Email: <a href="mailto:realtorbelveliz@gmail.com">realtorbelveliz@gmail.com</a> | WhatsApp: <a href="https://wa.me/19088081738">908-808-1738</a></p>
   </footer>
+
+  <div class="chatbot-toggle" onclick="toggleChat()">💬</div>
+  <div class="chatbot-box" id="chatbot-box">
+    <div class="chatbot-header">BelBot 🤖</div>
+    <div class="chatbot-messages" id="chatbot-messages">
+      <div class="bot">¡Hola! Soy BelBot. ¿En qué puedo ayudarte hoy?</div>
+    </div>
+    <input type="text" id="chat-input" placeholder="Escribe aquí..." onkeypress="handleKey(event)">
+  </div>
 
   <script src="script.js"></script>
 </body>

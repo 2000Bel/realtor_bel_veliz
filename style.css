@@ -1,80 +1,160 @@
 body {
-  font-family: 'Arial', sans-serif;
+  font-family: 'Segoe UI', sans-serif;
   margin: 0;
   padding: 0;
+  background: linear-gradient(135deg, #f2f3f5, #e0e7ff);
   color: #333;
-  background-image: url(background.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-attachment: fixed;
 }
 
 header {
-  text-align: center;
-  background: #304FFE;
+  background: #3f51b5;
   color: white;
+  text-align: center;
   padding: 2rem 1rem;
+  position: relative;
 }
 
-header .profile-photo {
-  width: 0px;
-  height: 0px;
+.profile-photo {
+  width: 120px;
+  height: 120px;
   border-radius: 50%;
   object-fit: cover;
-  border: px solid white;
+  border: 4px solid white;
   margin-bottom: 1rem;
 }
 
-.links a {
-  color: white;
-  text-decoration: underline;
+header a {
+  display: inline-block;
+  margin-top: 0.5rem;
+  text-decoration: none;
+  color: #ffeb3b;
+  font-weight: bold;
 }
 
-main {
+.cta-button {
+  display: inline-block;
+  margin-top: 1rem;
+  background: #ff9800;
+  color: white;
+  padding: 0.7rem 1.2rem;
+  border-radius: 30px;
+  text-decoration: none;
+  transition: background 0.3s;
+}
+
+.cta-button:hover {
+  background: #e65100;
+}
+
+section {
   padding: 2rem;
   max-width: 900px;
   margin: auto;
 }
 
-section {
-  margin-bottom: 2rem;
+.gallery .property-list {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
-ul {
-  list-style: square;
-  padding-left: 1.2rem;
+.gallery img {
+  width: 280px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
 }
 
-form {
+.contact form {
   display: flex;
   flex-direction: column;
-  gap: 0.8rem;
+  gap: 1rem;
 }
 
-input, textarea {
-  padding: 0.6rem;
+.contact input, .contact textarea {
+  padding: 0.8rem;
   border: 1px solid #ccc;
-  border-radius: 5px;
+  border-radius: 10px;
   font-size: 1rem;
 }
 
-button {
-  padding: 0.7rem;
-  background: #304FFE;
+.contact button {
+  padding: 0.9rem;
+  background: #3f51b5;
   color: white;
   border: none;
-  border-radius: 5px;
+  border-radius: 10px;
   cursor: pointer;
+  font-size: 1rem;
 }
 
-button:hover {
-  background: #1a34c6;
+.contact button:hover {
+  background: #1a237e;
 }
 
 footer {
+  background: #222;
+  color: #ccc;
   text-align: center;
   padding: 1rem;
-  background: #222;
+  font-size: 0.9rem;
+}
+
+/* Chatbot */
+.chatbot-toggle {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #3f51b5;
   color: white;
+  padding: 15px;
+  border-radius: 50%;
+  font-size: 24px;
+  cursor: pointer;
+  z-index: 1000;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+
+.chatbot-box {
+  position: fixed;
+  bottom: 90px;
+  right: 20px;
+  width: 300px;
+  max-height: 400px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+  display: none;
+  flex-direction: column;
+  overflow: hidden;
+  z-index: 1001;
+}
+
+.chatbot-header {
+  background: #3f51b5;
+  color: white;
+  padding: 1rem;
+  font-weight: bold;
+}
+
+.chatbot-messages {
+  padding: 1rem;
+  flex: 1;
+  overflow-y: auto;
+  font-size: 0.9rem;
+}
+
+.chatbot-messages .bot {
+  background: #e0e0e0;
+  padding: 0.5rem;
+  border-radius: 10px;
+  margin-bottom: 0.5rem;
+}
+
+#chat-input {
+  padding: 0.8rem;
+  border: none;
+  border-top: 1px solid #ddd;
+  width: 100%;
+  box-sizing: border-box;
 }
